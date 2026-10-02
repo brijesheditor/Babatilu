@@ -1,0 +1,292 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #17203b 0%,
+            #080b14 45%,
+            #05060a 100%
+        );
+
+    color: #ffffff;
+}
+
+.app {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.card {
+    width: 100%;
+    max-width: 520px;
+
+    padding: 28px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 28px;
+
+    background:
+        rgba(15, 18, 30, 0.88);
+
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.45);
+
+    backdrop-filter: blur(20px);
+}
+
+.logo {
+    width: 64px;
+    height: 64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6d5dfc,
+            #00c6ff
+        );
+
+    font-size: 30px;
+    font-weight: 900;
+
+    box-shadow:
+        0 12px 35px rgba(75, 100, 255, 0.35);
+}
+
+h1 {
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    margin-top: 7px;
+
+    color: #9da5bb;
+
+    font-size: 14px;
+}
+
+.status {
+    margin-top: 24px;
+
+    padding: 12px 14px;
+
+    border-radius: 14px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-align: center;
+}
+
+.status.offline {
+    background: rgba(255, 70, 70, 0.1);
+    color: #ff7676;
+}
+
+.status.online {
+    background: rgba(40, 220, 140, 0.1);
+    color: #42e39b;
+}
+
+.server-info {
+    margin-top: 16px;
+
+    padding: 15px;
+
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.info-row {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 8px 0;
+
+    color: #8f97ad;
+
+    font-size: 13px;
+}
+
+.info-row strong {
+    color: #ffffff;
+}
+
+.chat-box {
+    margin-top: 18px;
+}
+
+.messages {
+    height: 250px;
+
+    overflow-y: auto;
+
+    padding: 14px;
+
+    border-radius: 18px;
+
+    background: rgba(0, 0, 0, 0.18);
+
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.empty {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #737c93;
+
+    font-size: 13px;
+}
+
+.message {
+    margin-bottom: 10px;
+
+    padding: 10px 12px;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.message.system {
+    border-left: 3px solid #6d5dfc;
+}
+
+.message.chat {
+    border-left: 3px solid #00c6ff;
+}
+
+.message-text {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.message-time {
+    margin-top: 5px;
+
+    color: #6f7890;
+
+    font-size: 10px;
+}
+
+.message-form {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 12px;
+}
+
+.message-form input {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    outline: none;
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    color: #ffffff;
+
+    font-size: 14px;
+}
+
+.message-form input::placeholder {
+    color: #697187;
+}
+
+.message-form input:focus {
+    border-color: rgba(109, 93, 252, 0.7);
+}
+
+.message-form button {
+    border: 0;
+
+    padding: 0 18px;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6d5dfc,
+            #00aeea
+        );
+
+    color: #ffffff;
+
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.message-form button:active {
+    transform: scale(0.97);
+}
+
+@media (max-width: 480px) {
+
+    .app {
+        padding: 12px;
+    }
+
+    .card {
+        padding: 20px;
+
+        border-radius: 22px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .messages {
+        height: 220px;
+    }
+}
