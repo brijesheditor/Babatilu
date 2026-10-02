@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#080b14"
+    >
+
+    <title>TELESUPAR</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <section class="card">
+
+            <div class="logo">
+                T
+            </div>
+
+            <h1>TELESUPAR</h1>
+
+            <p class="subtitle">
+                Realtime Messaging Platform
+            </p>
+
+            <div id="connectionStatus" class="status offline">
+                Connecting...
+            </div>
+
+            <div class="server-info">
+
+                <div class="info-row">
+                    <span>Server</span>
+                    <strong id="serverStatus">
+                        Checking...
+                    </strong>
+                </div>
+
+                <div class="info-row">
+                    <span>Socket</span>
+                    <strong id="socketStatus">
+                        Connecting...
+                    </strong>
+                </div>
+
+            </div>
+
+            <div class="chat-box">
+
+                <div id="messages" class="messages">
+
+                    <div class="empty">
+                        Waiting for server...
+                    </div>
+
+                </div>
+
+                <form id="messageForm" class="message-form">
+
+                    <input
+                        id="messageInput"
+                        type="text"
+                        placeholder="Type a test message..."
+                        autocomplete="off"
+                    >
+
+                    <button type="submit">
+                        Send
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Socket.IO client -->
+    <script src="/socket.io/socket.io.js"></script>
+
+    <!-- App JS -->
+    <script src="./js/app.js"></script>
+
+</body>
+</html>
